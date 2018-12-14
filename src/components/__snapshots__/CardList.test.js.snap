@@ -2,24 +2,24 @@
 
 exports[`renders without crashing 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardList
     robots={
-        Array [
-            Object {
-              "email": "Sincere@april.biz",
-              "id": 1,
-              "name": "Leanne Graham",
-              "username": "Bret",
-            },
-          ]
+      Array [
+        Object {
+          "email": "Sincere@april.biz",
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+        },
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -33,7 +33,7 @@ ShallowWrapper {
           email="Sincere@april.biz"
           id={1}
           name="Leanne Graham"
-/>,
+        />,
       ],
     },
     "ref": null,
@@ -65,7 +65,7 @@ ShallowWrapper {
             email="Sincere@april.biz"
             id={1}
             name="Leanne Graham"
-/>,
+          />,
         ],
       },
       "ref": null,
@@ -91,6 +91,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },

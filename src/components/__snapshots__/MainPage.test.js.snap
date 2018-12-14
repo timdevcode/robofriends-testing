@@ -2,18 +2,30 @@
 
 exports[`renders without crashing 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MainPage
     isPending={false}
-    onRequestRobots={[Function]}
+    onRequestRobots={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     robots={Array []}
     searchField=""
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -24,16 +36,14 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header />,
-        <SearchBox
-          searchChange={undefined}
-/>,
+        <SearchBox />,
         <Scroll>
           <ErrorBoundary>
-                    <CardList
-                              robots={Array []}
-                    />
+            <CardList
+              robots={Array []}
+            />
           </ErrorBoundary>
-</Scroll>,
+        </Scroll>,
       ],
       "className": "tc",
     },
@@ -66,9 +76,9 @@ ShallowWrapper {
         "props": Object {
           "children": <ErrorBoundary>
             <CardList
-                        robots={Array []}
+              robots={Array []}
             />
-</ErrorBoundary>,
+          </ErrorBoundary>,
         },
         "ref": null,
         "rendered": Object {
@@ -78,7 +88,7 @@ ShallowWrapper {
           "props": Object {
             "children": <CardList
               robots={Array []}
-/>,
+            />,
           },
           "ref": null,
           "rendered": Object {
@@ -107,16 +117,14 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header />,
-          <SearchBox
-            searchChange={undefined}
-/>,
+          <SearchBox />,
           <Scroll>
             <ErrorBoundary>
-                        <CardList
-                                    robots={Array []}
-                        />
+              <CardList
+                robots={Array []}
+              />
             </ErrorBoundary>
-</Scroll>,
+          </Scroll>,
         ],
         "className": "tc",
       },
@@ -149,9 +157,9 @@ ShallowWrapper {
           "props": Object {
             "children": <ErrorBoundary>
               <CardList
-                            robots={Array []}
+                robots={Array []}
               />
-</ErrorBoundary>,
+            </ErrorBoundary>,
           },
           "ref": null,
           "rendered": Object {
@@ -161,7 +169,7 @@ ShallowWrapper {
             "props": Object {
               "children": <CardList
                 robots={Array []}
-/>,
+              />,
             },
             "ref": null,
             "rendered": Object {
@@ -187,6 +195,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },
