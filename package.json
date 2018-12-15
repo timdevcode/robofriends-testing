@@ -8,7 +8,9 @@
     "enzyme-adapter-react-16": "^1.7.1",
     "fetch-mock": "^6.3.0",
     "gh-pages": "^2.0.1",
+    "husky": "^1.2.1",
     "nock": "^9.2.5",
+    "pretty-quick": "^1.8.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -26,12 +28,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "pretty-quick --staged"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "1.15.3"
+  }
 }
